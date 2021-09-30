@@ -140,7 +140,7 @@ func (c *client) WatchService(ctx context.Context, srvName string, consulServerA
 		if entries, ok := result.([]*consul.ServiceEntry); ok {
 			
 			// added by ivivi @ 20210930
-			level.Info(logger).Log("msg", "watch return and execute handler")
+			level.Info(c.logger).Log("msg", "watch return and execute handler")
 			
 			var hs []string
 

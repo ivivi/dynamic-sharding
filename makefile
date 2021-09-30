@@ -13,7 +13,6 @@ BUILDUSER="ning1875"
 LDFLAGES=" -X 'github.com/prometheus/common/version.BuildUser=${BUILDUSER}'  -X 'github.com/prometheus/common/version.BuildDate=`date`'  "
 all:  deps build
 deps:
-	export GOPROXY=http://goproxy.io
 	export GO111MODULE=on
 build:
 		${GOBUILD}  -v  -ldflags ${LDFLAGES} -o ${BINARY_NAME} pkg/main.go

@@ -84,7 +84,7 @@ func StringSliceEqualBCE(a, b []string) bool {
 
 func RunReshardHashRing(ctx context.Context, logger log.Logger) {
 
-	level.Info(logger).Log("msg", "RunRefreshServiceNode start....")
+	level.Info(logger).Log("msg", "RunReshardHashRing start....")
 	for {
 		select {
 		case nodes := <-NodeUpdateChan:
